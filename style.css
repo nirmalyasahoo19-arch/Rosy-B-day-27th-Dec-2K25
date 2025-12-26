@@ -1,0 +1,256 @@
+:root{
+  --rose:#f6b7c1;
+  --pink:#ffd6e0;
+  --deep:#b45b73;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:linear-gradient(135deg,var(--pink),var(--rose));
+  min-height:100vh;
+  padding:20px;
+}
+
+.container{
+  max-width:850px;
+  margin:40px auto;
+  background:rgba(255,255,255,0.9);
+  border-radius:24px;
+  padding:40px 30px;
+  text-align:center;
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+.title{
+  font-family:'Playfair Display', serif;
+  font-size:2.6rem;
+  color:var(--deep);
+}
+
+.name{
+  font-size:1.8rem;
+  margin:10px 0;
+}
+
+.subtitle{
+  font-size:1.1rem;
+  opacity:0.8;
+  margin-bottom:20px;
+}
+
+.photo-wrap{
+  margin:20px 0;
+}
+.photo{
+  width:220px;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(180,91,115,0.35);
+}
+
+.main-text{
+  font-size:1rem;
+  line-height:1.8;
+  margin-top:20px;
+}
+
+.secret-card{
+  margin:30px auto 0;
+  padding:10px 18px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.6);
+  width:fit-content;
+  cursor:pointer;
+  font-size:0.9rem;
+  opacity:0.75;
+}
+.secret-card:hover{
+  opacity:1;
+}
+
+/* NOTE OVERLAY */
+.note-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.note-box{
+  background:#fffafc;
+  max-width:520px;
+  width:90%;
+  padding:30px 26px;
+  border-radius:20px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+  position:relative;
+}
+
+.note-box h3{
+  text-align:center;
+  margin-bottom:16px;
+  font-family:'Playfair Display', serif;
+  color:var(--deep);
+}
+
+/* NOTE BOX */
+.note-box{
+  background:#fffafc;
+  max-width:520px;
+  width:90%;
+  max-height:80vh;          /* IMPORTANT */
+  padding:30px 26px;
+  border-radius:20px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+
+/* SCROLLABLE NOTE TEXT */
+.note-text{
+  font-family:'Libre Baskerville', serif;
+  font-size:0.97rem;
+  line-height:1.9;
+  color:#3f2a32;
+
+  background:#fff;
+  padding:18px 16px;
+
+  border-radius:12px;
+  border-left:4px solid #e9a3b1;
+
+  overflow-y:auto;
+  max-height:55vh;
+
+  box-shadow: inset 0 0 0 1px rgba(180,91,115,0.08);
+}
+
+.close-note{
+  position:absolute;
+  top:14px;
+  right:18px;
+  font-size:1.4rem;
+  cursor:pointer;
+  opacity:0.6;
+}
+.close-note:hover{
+  opacity:1;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .title{font-size:2.2rem}
+  .name{font-size:1.5rem}
+  .photo{width:180px}
+}
+.balloon{
+  position:fixed;
+  bottom:-120px;
+  width:60px;
+  height:80px;
+  border-radius:50%;
+  animation:float linear infinite;
+  z-index:1;
+  cursor:pointer;
+}
+.balloon::after{
+  content:'';
+  position:absolute;
+  bottom:-35px;
+  left:50%;
+  width:2px;
+  height:35px;
+  background:#aaa;
+}
+
+.b1{left:8%; background:#ffb3c6; animation-duration:12s}
+.b2{left:28%;background:#ffc8dd; animation-duration:10s}
+.b3{left:48%;background:#ffafcc; animation-duration:11s}
+.b4{left:68%;background:#f7cad0; animation-duration:9s}
+.b5{left:85%;background:#ffd6e0; animation-duration:13s}
+
+@keyframes float{
+  from{transform:translateY(0)}
+  to{transform:translateY(-120vh)}
+}
+
+.balloon.pop{
+  transform:scale(1.4);
+  opacity:0;
+}
+
+.cake{
+  width:160px;
+  margin:30px auto;
+  cursor:pointer;
+}
+.layer{
+  height:34px;
+  background:#ffd6e0;
+  border-radius:12px;
+  margin-bottom:6px;
+  box-shadow: inset 0 -4px #f6b7c1;
+}
+.candle{
+  width:10px;
+  height:32px;
+  background:#fff;
+  margin:0 auto 8px;
+  position:relative;
+}
+.candle::after{
+  content:'';
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:14px;
+  height:14px;
+  background:orange;
+  border-radius:50%;
+  transition:opacity 0.6s ease;
+}
+.candle.off::after{
+  opacity:0;
+}
+.secret-card{
+  margin:30px auto 0;
+  padding:14px 22px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff9db0,#d86b85);
+  color:white;
+  font-size:0.95rem;
+  font-weight:500;
+  cursor:pointer;
+  box-shadow:0 12px 24px rgba(0,0,0,0.2);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+.note-box{
+  background:#fff;
+  max-width:560px;
+  width:92%;
+  max-height:85vh;
+  padding:32px 28px;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.3);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+
+
