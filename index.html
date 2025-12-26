@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday 🌸</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+  
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+<!-- Balloons -->
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+  <h1 class="title">Happy Birthday 🌸</h1>
+
+  <div class="name">
+    Rojalin — <strong>Rose 🌹</strong>
+  </div>
+
+  <h2 class="subtitle">A beautiful day for someone special</h2>
+
+  <!-- Optional Image -->
+  <div class="photo-wrap">
+    <img src="rose.jpg" alt="Rose" class="photo">
+  </div>
+  
+  <!-- Cake -->
+<div class="cake" onclick="blowCandle(event)">
+  <div class="candle"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+</div>
+
+
+  <!-- OUTSIDE NOTE TEXT -->
+  <p class="main-text">
+    Happiest Birthday to you 🌸  
+    I hope today brings you a smile that stays a little longer and moments that feel genuinely special.
+    You truly are someone important to me, and you will always remain special in my thoughts.
+    <br><br>
+    I sincerely wish for your success and happiness in everything you choose to pursue.
+    I pray that life always gives you reasons to smile, and even if our paths move in different directions,
+    my only wish is that you remain happy — always.
+  </p>
+
+  <!-- Secret Card -->
+  <div class="secret-card" id="secretCard">
+  👆 Tap here to read a small note
+</div>
+
+</div>
+
+<!-- NOTE OVERLAY -->
+<div class="note-overlay" id="noteOverlay">
+  <div class="note-box">
+    <span class="close-note" id="closeNote">×</span>
+
+    <h3>Just a gentle note</h3>
+
+    <!-- NOTE TEXT -->
+   <p class="note-text">
+  Maine kabhi bhi aisa socha ya chaha nahi ki main aapko disturb ya disrespect karun,
+  lekin fir bhi kabhi-kabhi ulta-sidha bol hi deta hoon.
+  Sach kahun to, college ke time se hi ek baat thi —
+  kaash kabhi aapse baat kar paata.
+  <br><br>
+  Bahut baar main message karne se pehle sochta hoon —
+  kahin disturb to nahi kar raha,
+  ya jo main poochna chahta hoon wo theek hai ya nahi.
+  Isliye kabhi-kabhi darr aur doubt reh jaata hai.
+  <br><br>
+  Honestly, I respect you a lot —
+  not just for who you are,
+  but also for the way you understand people around you.
+  Thank you for always supporting me,
+  for being patient even when I sometimes go beyond my words,
+  and for helping me find clarity and regain balance
+  with understanding and kindness.
+  <br><br>
+  Aapne ek baar kaha tha ki zyada attached nahi hona chahiye,
+  aur main us baat ko samajhne aur us par kaam karne ki koshish kar raha hoon.
+  Mujhe koi expectation nahi hai —
+  bas itna sa hai ki kaash kahin se mujhe aapke jaisa ek dost mil paata,
+  to mujhe bahut khushi hoti.
+  <br><br>
+  Bas itna hi kehna tha aapse —
+  Thanks for being you, just the way you are.
+</p>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
